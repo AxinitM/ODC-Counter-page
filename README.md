@@ -18,7 +18,7 @@ The page was created as part of the [Front End Developer Course by Orange DC](ht
 
 ## Links
 
-[Counter Page]()
+[Counter Page](https://axinitm.github.io/ODC-Counter-page/)
 
 ## Tasks
 
