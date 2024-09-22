@@ -1,0 +1,167 @@
+/* main font "Old Standard TT" */
+@import url("https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap");
+
+/* number font  "Leaner" */
+@font-face {
+  font-family: "Leaner";
+  src: url("./fonts/Leaner-Thin.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  /* colors */
+  --mainFontColor: #00008b;
+  --mainBgColor: #fff8dc;
+  --buttonBgColor: #f0ffff;
+  --buttonHoverColor: #006400;
+  --whiteColor: #fff;
+  --blackColor: #000;
+
+  /* fonts */
+  --mainFont: "Old Standard TT", serif;
+  --mainFontNumbers: "Leaner", sans-serif;
+}
+
+/* general sets*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--mainFont);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: var(--mainFontColor);
+  background-color: var(--mainBgColor);
+  width: 100vw;
+  font-size: 24px;
+}
+
+/* header section  */
+
+h1 {
+  font-size: 7rem;
+  margin: 50px;
+}
+
+/* main section */
+
+#mainSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* main section number window */
+
+h2 {
+  font-size: 5rem;
+  font-family: var(--mainFontNumbers);
+  color: var(--blackColor);
+  padding: 20px;
+}
+
+/* main section button section */
+
+#buttonSection {
+  display: flex;
+  justify-content: space-around;
+  width: 90%;
+  margin: 60px auto;
+  gap: 80px;
+}
+
+button {
+  font-size: 2rem;
+  font-weight: 700;
+  width: 250px;
+  text-align: center;
+  padding: 20px;
+  background-color: var(--buttonBgColor);
+  color: var(--mainFontColor);
+  box-shadow: 5px 5px 5px var(--blackColor);
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+button:hover {
+  color: var(--buttonHoverColor);
+}
+
+button:active {
+  transform: scale(0.98);
+  box-shadow: 2px 2px 2px var(--blackColor);
+  color: var(--whiteColor);
+  background-color: var(--buttonHoverColor);
+}
+
+button:visited {
+  color: var(--mainFontColor);
+}
+
+/* @media section */
+
+@media screen and (max-width: 470px) {
+  body {
+    width: 90%;
+    font-size: 16px;
+    margin: 10px auto;
+  }
+
+  #mainSection {
+    overflow: hidden;
+  }
+
+  h1 {
+    font-size: 4rem;
+    margin: 20px;
+  }
+
+  #buttonSection {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    gap: 20px;
+  }
+
+  button {
+    font-size: 1.5rem;
+    font-weight: 700;
+    min-width: 150px;
+    padding: 20px;
+    margin: 20px auto;
+    color: var(--mainFontColor);
+    background-color: var(--buttonBgColor);
+    box-shadow: 2px 2px 2px var(--blackColor);
+    border-radius: 10px;
+    cursor: pointer;
+    outline: none;
+  }
+
+  button:hover {
+    color: var(--buttonBgColor);
+  }
+
+  button:active {
+    transform: scale(0.99);
+    box-shadow: 2px 2px 2px var(--blackColor);
+    color: var(--mainFontColor);
+    background-color: var(--buttonBgColor);
+  }
+
+  button:focus {
+    color: var(--mainFontColor);
+    background-color: var(--buttonBgColor);
+    box-shadow: 2px 2px 2px var(--blackColor);
+  }
+}
